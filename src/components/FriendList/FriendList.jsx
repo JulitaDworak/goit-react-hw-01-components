@@ -3,7 +3,7 @@ import css from './Friends.module.css';
 
 export const FriendList = ({ friends }) => {
   return (
-    <>
+    
       <div className={css.friendsItem}>
         <ul className={css.friendList}>
           {friends.map(friend => (
@@ -17,7 +17,7 @@ export const FriendList = ({ friends }) => {
           ))}
         </ul>
       </div>
-    </>
+    
   );
 };
 
