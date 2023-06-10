@@ -1,0 +1,55 @@
+.friendsItem{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* border: 1px solid rgba(128, 128, 128, 0.432); */
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.friendList{
+padding: 50px;
+margin: 0;
+
+}
+
+.friendList li{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+       row-gap: 20px;
+
+    }
+
+    .item{
+        display: flex;
+        margin: 20px;
+        
+        box-shadow: inset -9px 12px 46px -34px rgba(66, 68, 90, 1);
+    border-radius: 10px;
+        height: 100px;
+        padding: 20px;
+        column-gap: 20px;
+        align-items: center;
+    }
+
+    .item img{
+        width: 54px;
+        background-color: bisque;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .online{
+        width: 20px;
+        background-color: green;
+        height: 20px;
+        border-radius: 50px;
+    }
+
+   .offline{
+        width: 20px;
+        height: 20px;
+        background-color: rgb(159, 17, 26);
+        border-radius: 50px;
+    }

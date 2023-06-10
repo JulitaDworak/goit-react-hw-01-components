@@ -1,32 +1,37 @@
-// import DataTable from "react-data-table-component"
-// import {useState, useEffect} from 'react'
+import css from './Transaction.module.css';
+import PropTypes from 'prop-types';
 
-export const Transaction = ({transactions
-})=> {
+export const Transaction = ({ transactions }) => {
   return (
-<>
-<table>
-<thead>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
-    </tr>
-  </thead>
-  <tbody>
-{
-  transactions.map( transaction => (
-<tr>
-    <td>{transaction.type}</td>
-    <td>{transaction.amount}</td>
-    <td>{transaction.currency}</td>
-    </tr>
-  )
-  )
-}
-</tbody>
-</table>
-  </>
-  )}
+    <>
+      <table className={css.table}>
+        <thead>
+          <tr className={css.tableHead}>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Currency</th>
+          </tr>
+        </thead>
+        <tbody>
+          {transactions.map(transaction => (
+            <tr className={css.tableRow}>
+              <td>{transaction.type}</td>
+              <td>{transaction.amount}</td>
+              <td>{transaction.currency}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </>
+  );
+};
 
-
+Transaction.propTypes = {
+  transactions: PropTypes.arrayOf(
+    PropTypes.shape({
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.number.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
+};
